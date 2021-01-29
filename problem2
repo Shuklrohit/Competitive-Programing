@@ -1,3 +1,14 @@
 two lists are given check that one is subset of other or not
 m = [1,2]
 n = [1,2,3]
+
+Solution: 
+
+t = []
+for i in m:
+  if i in n:
+    t.append(i)
+if len(m)== len(t):
+  print(" M is subset of N")
+else:
+  print(" M is not subset of N")
