@@ -11,3 +11,22 @@ Output: "bacdfeg"
 
 
 Solution:
+
+
+s = 'abcdefg'
+s = list(s)
+print(s)
+i = 0
+k =2
+while i < len(s):
+            l = i
+            h = (i + k - 1) if (i + k - 1) < len(s) else len(s) - 1
+#             print(h)
+            while l < len(s) and l < h:
+                print(l , h , len(s))
+                print(s[l], s[h])
+                s[l], s[h] = s[h], s[l]
+                l += 1
+                h -= 1
+            i += (2 * k)
+            print(''.join(s))
